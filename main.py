@@ -9,14 +9,15 @@
 # print(add(1, 2, 3))
 
 
-
+#Unlimited Keyword Args
 def calc(n, **kwargs):
     print(kwargs)
     print(type(kwargs))
 
     print(n)
-    print(n+kwargs["add"])
-    print(n + kwargs["mul"])
+    print(n+kwargs.get("add"))
+    print(kwargs.get("mul"))
 
 
 calc(2,add=3,mul=5)
+calc(2,add=4)
